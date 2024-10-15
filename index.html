@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Test</title>
+  <title>My Flask App</title>
+  <script>
+    // This script is a placeholder, you may need to modify it based on your needs
+    function getData() {
+      fetch('/data')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          // Update the page with the retrieved data (optional)
+          // document.getElementById('version_int').textContent = data.Version_int;
+          // document.getElementById('version_str').textContent = data.Version;
+        })
+        .catch(error => console.error(error));
+    }
+  </script>
 </head>
 <body>
-    <h3>Test page</h3>
-</body>
+  <h1>Welcome to my Flask app!</h1>
+  <button onclick="getData()">Get JSON Data</button>
+  </body>
 </html>
