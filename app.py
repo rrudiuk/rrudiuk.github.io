@@ -5,9 +5,10 @@ app = Flask(__name__)
 
 @app.route('/data')
 def get_data():
+    # Logic to generate or retrieve your data
     data = {
-        "Version_int": 3.8,
-        "Version": "3.8"
+        "version": "1.0",
+        "message": "Hello from the API!"
     }
     return jsonify(data)
 
